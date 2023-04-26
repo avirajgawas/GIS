@@ -1,0 +1,74 @@
+Demonstrate Georeferencing using the Raster data (southern-india.jpg)
+
+1. Add vector layer. (IND_adm0.shp) click on Add. 
+2. zoom southern india. 
+3.  Zoom in Southern india in map.
+
+6.  Click on Raster.  Click on Georeferncer.
+
+7. GeoReferncer window is open.
+
+    i. Click on file.  Click on Open Raster And Select(southern.jpg).
+    ii. Click on Edit And select Add point.
+    iii. Select 4 point . From canvas map.
+    iv. Click on Setting. Click on transformation Setting.
+     v. transformation Setting will apper your screen.
+
+        transformation = thin Plate Spline
+        Resamplig method = Nearest neighbour
+        Target SRS = Unknown datum based upon the Everest 1830 EPSG:4044
+        click on ok.
+         Output file save = southern_India_modified.tif
+         Click on Check Box of (Load in QGIS When done) 
+        Click on ok.
+      vi. Click on Run button. 
+      vii. Click on Georeferncer close. And Click on Save (GCP Points).
+
+8. Right click on southern_india_modified. And open properties.  Select Tranperancy level decrease.
+
+End............................................................
+
+                      Practical 2
+
+Perform terrain analysis of given raster (mea300.tif).
+
+1. Add Raster layer (10n060e_20101117_gmted_mea300.tif)
+
+2. Add coordinate (86.92,27.98) Add scale (1.900000)
+
+3. Click on Raster. Click on Extraction. Click on clip Raster by Extent.
+
+4. clip Raster by Extent window is open. 
+
+   Input layer = 10n060e_20101117_gmted_mea300
+   clipping extent is select. click on use canvas Extent.
+
+save file = clippedhimalaya.tif.  click on Run.
+
+5. deselect  10n060e_20101117_gmted_mea300 layer. And select clippedhimalaya.
+      Click on Raster. Click on Extraction. Click on contour. 
+
+6. contour window is open.
+
+Input layer = clipped himalaya
+Band number = Band 1 (Grey)
+Interval between contour lines = 100.000000
+Save file = contourhimalaya.gpkg format. Click on Run.
+
+7. Right click on contourhimalaya And open properties.
+
+   click on labels. select single labels. Select value = ELEV. change color. and click ok.
+
+8. Click on Raster. Click on Analysis. Click on Hillshade.
+
+Hillshade window is open.
+
+Input Layer = clippedhimalaya
+Band number = band 1 (grey)
+save File = hillshade.tif
+click on run.  
+
+End........................................
+     
+
+  

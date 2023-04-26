@@ -1,0 +1,51 @@
+calculate garden area.
+
+add 4  garden. using click on Layer and select create layer and create newshapefile layer.
+
+select as name of garden.
+
+geometry type = polygon. and add name field.
+
+click ok.
+
+Right click on garden layer. open attribute table. and click on Field calculator. 
+
+outputField name = Area
+
+outputField type = Decimal number (real)
+
+expand geometry and select area on double click. then press ok.
+
+---------------------------------------------
+
+largest garden 
+
+using acending and decending. using single label. show area label.
+
+-----------------------------------------
+
+tracts that intersect with highway.
+
+click on vector. click Analysis tool. select line intersection.
+
+select input layer = highway layer 
+
+Intersect layer = Track rail.
+
+And click on Run.
+--------------------------------------------------
+
+Find restarunt inside a garden.
+
+click on vector. click Analysis tool. select count points in polygon.
+
+select polygons = garden
+
+points = restarunt 
+
+click on run.
+
+Right click on count layer and open atrribute table.
+
+--------------------------------------------------
+

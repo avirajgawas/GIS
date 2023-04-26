@@ -1,0 +1,23 @@
+1. Add Vector layer. ne_10m_populated_places_simple.shp and also add ne_10m_rivers_lake_centerlines.shp
+
+2. Click On the Project Properties. Search CRS = World_Azimuthal_Equidistant EPSG:54032
+
+3. select this crs and apply and Click ok.
+
+4. Click On Vector And Select Geoprocessing Tools And Select Buffers.
+
+   InputLayer =  ne_10m_rivers_lake_centerlines
+
+    Distance = 0.02
+    Click Run And Ok.
+
+5. Click On Vector. Select the Research Tools And Click  On Select by Location.
+      
+6. Select by Location Window is Appear
+   Select features from = Buffered
+   by comparing to the features from = ne_10m_populated_places_simple
+
+click on Run.
+
+
+

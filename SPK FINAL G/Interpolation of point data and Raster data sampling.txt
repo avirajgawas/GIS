@@ -1,0 +1,102 @@
+Interpolation of point data.
+
+1. Add vector layer.(Arlington_soundings_2007_stpl83.shp and Boundry2004_550_stpl83.shp) Add this 2 vector layer.
+
+2. Open toolbox And search  TIN interpolation (Install plgin Interpolation plugin)
+
+   Vector layer = Arlington_soundings_2007_stpl83.shp 
+   Interpolation attribute = ELEVATION
+   Click On +  Add symbol 
+   Interpolation method = Linear
+   pixel size X and Y = 5.000000
+   Save file ( elevation_tin.tif)
+
+  click on Extent ..... select Arlington_soundings_2007_stpl83 [calculate from layer]. click on Run.
+
+4. click on elevation_tin. Then Click on raster. Click on Extraction. Click on clip raster by Mask Layer.
+
+5. The clip Raster by Mask Layer window is open.
+    
+   Input layer = elevation_tin
+   Mask layer = Boundry2004_550_stpl83
+   clipped mask File save = elevation_tin_clipped.tif
+    click on Run.
+6. set layer 
+ 1. Boundry2004_550_stpl83
+ 2. elevation_tin_clipped
+ 3. elevation_tin
+ 4. Arlington_soundings_2007_stpl83
+
+7. Right click on elevation_tin_clipped open properties.
+    Select symbology 
+     render type = singleband pseudocolor
+     Min = 500.766  max = 546.419
+     Click on classify.
+     and change color.
+       click ok.
+
+8. Right click on elevation_tin_clipped open properties.
+   click on Transparancy
+    Additional no data value = 0
+     click ok.
+9. select on elevation_tin_clipped 
+   Then Click on raster. Click on Extraction. Click on contour.
+
+Contour window is open
+ Input layer = elevation_tin_clipped
+band number = band 1 Grey
+Interval between contour lines = 5.000000 using down aroow.
+
+save file (counters.gpkg) And Run.close.
+
+10. Right click on counters And change style. and open Properties.
+
+click on Labels 
+Select single labels. Value select The (ELEV).
+
+Click on Placement And Select Mode = Curved
+
+Click on Ok.
+
+End.....
+
+
+
+
+Rater data sampling 
+ Part 1
+1. Add raster layer. us.tmax_nohads_ll_20140525_float file add.
+2. Add delimited text layer. add 2013.gaz_ua_national file.
+3. File format tick on tab format only.
+4. x field = INTPTLONG y field = INTPLAT 
+5. Geometry CRS = EPSG:4326-WGS 84. click on ADD.
+6. Click on plugins add Analyses = point sampling tool (install plugin from manage plugins)
+ 
+  Select plugins. click on Analyses and click on point sampling Tool.
+7. click on GEOID , NAME , us.tmax_nohads_ll_20140525_float Band 1(raster).
+8. Save file in Format (.shp) max_temperature_at_urban_location.shp. Then click on ok.
+
+output of location,shp file is appear .
+
+End..
+
+Part 2
+
+1. Delete the 2 layer from part 1 (1.max_temperature_at_urban_location.shp 2. 2013_Gaz_ua_national) files.
+2.Add vector layer.(tl_2013_us_country.shp).
+   EPSG:1188 north america.
+3. Right click on tl_2013_us_country.shp. Click on Export. then click on save features as.. (Format=ESRI shapefile And file name = counties.shp) CRS= EPSG:4326-WGS 84 then ok.click Checkbox on Add saved file to map.
+
+4. Open toolbox. search zonal statics.
+   input layer = counties
+   Raster layer = us.tmax_nohads_20140525_float
+   output column = ZS_
+ and click on the Run.
+
+5. Right click on zonal statics layer. Click on properties.Click on symbology. Click on Graduated.
+Click on Value = ZS_mean 
+Click  on colorramp = OrRd
+Mode = Equal interval
+Click on Classify. Apply And ok.
+
+

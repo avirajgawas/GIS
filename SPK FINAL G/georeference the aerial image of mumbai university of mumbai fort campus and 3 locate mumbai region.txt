@@ -1,0 +1,67 @@
+       1 practical : georeference the aerial image of mumbai university of mumbai fort campus.
+
+1. Add openLayer Plugin
+2. Add OSM Place Search plugin
+3. Add Georefrencing GDAL plugin
+
+4. Click on Web.Click on openLayer Plugin. Click on open StreetMap. Click on open StreetMap.
+
+5. Zoom in Southern india in map.
+
+6.  Click on Raster.  Click on Georeferncer.
+
+7. GeoReferncer window is open.
+
+    i. Click on file.  Click on Open Raster And Select(southern.jpg).
+    ii. Click on Edit And select Add point.
+    iii. Select 4 point . From canvas map.
+    iv. Click on Setting. Click on transformation Setting.
+     v. transformation Setting will apper your screen.
+        transformation = thin Plate Spline
+        Resamplig method = Nearest neighbour
+        Target SRS = WGS / Pseudo-Mercator EPSG:3857
+        click on ok.
+         Output file save = southern_India_modified.tif
+         Click on Check Box of (Load in QGIS When done) 
+        Click on ok.
+      vi. Click on Run button. 
+      vii. Click on Georeferncer close. And Click on Save (GCP Points).
+
+8. Right click on southern_india_modified. And open properties.  Select Tranperancy level decrease.
+
+
+End.............................
+
+ 2 practical : 
+
+
+
+
+3 practical  : 
+
+
+1. Add vector layer. (IND_adm0.shp) click on Add. 
+2. zoom southern india. 
+3.  Zoom in Southern india in map.
+
+6.  Click on Raster.  Click on Georeferncer.
+
+7. GeoReferncer window is open.
+
+    i. Click on file.  Click on Open Raster And Select(southern.jpg).
+    ii. Click on Edit And select Add point.
+    iii. Select 4 point . From canvas map.
+    iv. Click on Setting. Click on transformation Setting.
+     v. transformation Setting will apper your screen.
+
+        transformation = thin Plate Spline
+        Resamplig method = Nearest neighbour
+        Target SRS = Unknown datum based upon the Everest 1830 EPSG:4044
+        click on ok.
+         Output file save = southern_India_modified.tif
+         Click on Check Box of (Load in QGIS When done) 
+        Click on ok.
+      vi. Click on Run button. 
+      vii. Click on Georeferncer close. And Click on Save (GCP Points).
+
+8. Right click on southern_india_modified. And open properties.  Select Tranperancy level decrease.

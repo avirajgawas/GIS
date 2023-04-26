@@ -1,0 +1,46 @@
+1.Add raster layer. 
+
+2. Add chrischurch Topo50 map.
+
+3. Add Right click on chrischurch Topo50 . click properties.
+
+4. Select pyramids. Select All Resolution and Press Build Pyramid. Click ok.
+
+5. Then click on Settings in Ribbon.  Select option. 
+
+6. Click on Digitizing. 
+
+7. Select color = blue 
+    Default snap mode = Vertex and segment
+    
+    Click the checkbox of Show markers only for selected features.
+
+8. Add Layer. Create Layer and select new Spatialite Layer.
+
+9. The New Spatialite Layer window is open. 
+   save file = select path for save file.
+   Layer name = DigiRoads
+   Geometry type = line
+   EPSG:4326 WGS 84
+   
+   Add Name field and click ok.
+
+10. draw the line of Roads.
+
+11. Add Layer. Create Layer and select new Spatialite             Layer.
+     The New Spatialite Layer window is open. 
+   save file = select path for save file.
+   Layer name = DigiRoads
+   Geometry type = ploygon
+   EPSG:4326 WGS 84
+   
+   Add Name field and click ok.
+
+12. draw the polygon of garden.
+
+    
+
+
+
+
+
